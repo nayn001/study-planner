@@ -1,19 +1,19 @@
-import { useState } from 'react';
 import './App.css';
+import TimeTable, {TimetableEvent} from './TimeTable'
+
 
 function App() {
-  const [count, setCount] = useState(0);
+  const events:TimetableEvent[] = [
+    {day: "Wed", period: 2, title: "情報システム設計"},
+    {day: "Wed", period: 3, title: "ITビジネスのフロンティア"}
+  ];
 
   return (
     <>
-      <h1>履修相談Assistant</h1>
-      <table>
-        <tr>
-          <th>時限</th>
-          <th>月</th>
-          <th>火</th>
-        </tr>
-      </table>
+      <header>
+        <h1 class="h-7">Study Planner</h1>
+      </header>
+      <TimeTable events={events}></TimeTable>
     </>
   );
 }
