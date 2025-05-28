@@ -1,4 +1,4 @@
-# Study planner
+#Study Planer
 Test
 これはテストです。
 
